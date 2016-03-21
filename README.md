@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/networklore/ansible-role-nagios.svg?branch=master)](https://travis-ci.org/networklore/ansible-role-nagios)
+[![Build Status](https://travis-ci.org/networklore/ansible-role-nrpe-client.svg?branch=master)](https://travis-ci.org/networklore/ansible-role-nrpe-client)
 NRPE Client
 ===========
 
