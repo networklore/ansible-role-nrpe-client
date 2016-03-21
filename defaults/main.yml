@@ -1,0 +1,9 @@
+---
+
+# This NRPE package is only used for the plugin, as the nrpe plugin on some distributions
+# require the distributions Nagios package to be installed.
+nrpeurl: http://sourceforge.net/projects/nagios/files/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
+nrpesrc: nrpe-2.15
+
+# Location of monitoring plugins
+plugins_dir: /usr/local/nagios/libexec

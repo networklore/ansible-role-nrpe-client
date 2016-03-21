@@ -1,0 +1,8 @@
+---
+
+- name: Install NRPE prerequisites
+  apt: pkg={{ item }} state=present
+  with_items:
+   - build-essential
+   - openssl
+   - libssl-dev

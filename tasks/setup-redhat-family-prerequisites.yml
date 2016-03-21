@@ -1,0 +1,10 @@
+---
+
+- name: Install NRPE prerequisites
+  yum: pkg={{ item }} state=present
+  with_items:
+   - gcc
+   - glibc
+   - glibc-common
+   - make
+   - openssl-devel
