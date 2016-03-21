@@ -21,7 +21,7 @@
   shell: cd {{ ansible_env.HOME }}/nrpe && tar -xzvf {{ nrpesrc }}.tar.gz creates={{ ansible_env['HOME'] }}/nrpe/{{ nrpesrc }}
 
 - name: Configure NRPE
-  shell: cd {{ ansible_env.HOME }}/nrpe/{{ nrpesrc }} && ./configure --with-ssl=/usr/bin/openssl --with-ssl-lib=/usr/lib/x86_64-linux-gnu creates={{ ansible_env['HOME'] }}/nagios/{{ nrpesrc }}/Makefile
+  shell: cd {{ ansible_env.HOME }}/nrpe/{{ nrpesrc }} && ./configure --with-ssl=/usr/bin/openssl --with-ssl-lib=/usr/lib/x86_64-linux-gnu creates={{ ansible_env['HOME'] }}/nrpe/{{ nrpesrc }}/Makefile
 
 - name: Make NRPE
   shell: cd {{ ansible_env.HOME }}/nrpe/{{ nrpesrc }} && make all creates={{ ansible_env['HOME'] }}/nrpe/{{ nrpesrc }}/src/check_nrpe
