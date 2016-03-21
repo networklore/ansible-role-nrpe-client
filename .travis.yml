@@ -41,7 +41,7 @@ script:
 
   # Test role idempotence.
   - >
-    sudo docker exec "$(cat ${container_id})" ansible-playbook /etc/ansible/roles/ansible-role-nagios/tests/${playbook}
+    sudo docker exec "$(cat ${container_id})" ansible-playbook /etc/ansible/roles/ansible-role-nrpe-client/tests/${playbook}
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
