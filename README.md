@@ -1,41 +1,53 @@
+# Ansible Role: NRPE Client
+
 [![Build Status](https://travis-ci.org/networklore/ansible-role-nrpe-client.svg?branch=master)](https://travis-ci.org/networklore/ansible-role-nrpe-client)
-NRPE Client
-===========
 
-This role is a work in progress. Don't use yet.
+* This role is a work in progress. Don't use yet.
 
-A brief description of the role goes here.
+This role installs the NRPE client on a monitoring server. You can use this role as an addon to the `networklore/nagios`role.
 
-TODO
-----
 
-* Segment playbook
+# Requirements
 
-* Add tests to verify that the services are working
+None.
 
-Requirements
-------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+# Role Variables
 
-Role Variables
---------------
+The variables you can configure are listed below. For the default settings you can look in `defaults/main.yml`.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+    download_dir: /home/user/download/nrpe
 
-Dependencies
-------------
+This is the directory where the downloaded files will be placed and extracted.
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+    nrpeurl: http://sourceforge.net/projects/nagios/files/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
+    nrpesrc: nrpe-2.15
 
-Example Playbook
+The download url for NRPE along with the directory name which will be created when the source file is
+decompressed to. I.e. with `tar -xzvf nrpe-2.15.tar.gz`
+
+    plugins_dir: /usr/local/nagios/libexec
+
+The location of where you want to place the check_nrpe file, usually where your other monitoring plugins are located.
+
+# Dependencies
+
+This role doesn't have any strict dependencies but can be used with `networklore/nagios`.
+
+# Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Install NRPE to your current monitoring plugin directory.
 
-    - hosts: servers
+    - hosts: monitoring-servers
+      vars_files:
+       - vars/main.yml    
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: networklore.nrpe-client }
+
+*Contents of vars/main.yml*:
+
+    plugins_dir: /usr/lib64/nagios/plugins
 
 License
 -------
