@@ -6,12 +6,12 @@ env:
     version: 6
     init: /sbin/init
     run_opts: ""
-    playbook: test-centos7.yml
+    playbook: centos7.yml
   - distribution: centos
     version: 7
     init: /sbin/init
     run_opts: ""
-    playbook: test.yml
+    playbook: test-test.yml
   - distribution: ubuntu
     version: 14.04
     init: /sbin/init
