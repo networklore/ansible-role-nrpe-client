@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  remote_user: root
+  vars_files:
+   - vars/main.yml
+  roles:
+    - ansible-role-nrpe-client
