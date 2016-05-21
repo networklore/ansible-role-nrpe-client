@@ -1,6 +1,6 @@
 galaxy_info:
   author: Patrick Ogenstad
-  description:
+  description: Install NRPE Client to monitor servers running NRPE
   company: Networklore
 
   # If the issue tracker for your role is not on github, uncomment the
