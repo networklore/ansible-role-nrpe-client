@@ -54,4 +54,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+This role was created in 2016 by [Patrick Ogenstad](https://networklore.com).
