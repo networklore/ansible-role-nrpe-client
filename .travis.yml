@@ -7,11 +7,11 @@ env:
     init: /sbin/init
     run_opts: ""
     playbook: test.yml
-  - distribution: centos
-    version: 7
-    init: /sbin/init
-    run_opts: ""
-    playbook: test-centos7.yml
+  #- distribution: centos
+  #  version: 7
+  #  init: /sbin/init
+  #  run_opts: ""
+  #  playbook: test-centos7.yml
   - distribution: ubuntu
     version: 14.04
     init: /sbin/init

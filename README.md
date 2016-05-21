@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/networklore/ansible-role-nrpe-client.svg?branch=master)](https://travis-ci.org/networklore/ansible-role-nrpe-client)
 
-* This role is a work in progress. Don't use yet.
-
 This role installs the NRPE client on a monitoring server. You can use this role as an addon to the `networklore/nagios`role.
 
 
@@ -35,7 +33,6 @@ The location of where you want to place the check_nrpe file, usually where your 
 This role doesn't have any strict dependencies but can be used with `networklore/nagios`.
 
 # Example Playbook
-----------------
 
 Install NRPE to your current monitoring plugin directory.
 
